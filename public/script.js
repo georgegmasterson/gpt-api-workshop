@@ -31,7 +31,7 @@ messageForm.addEventListener('submit', async (event) => {
     // UNCOMMENT THE MULTI-LINE COMMENT BELOW FOR STEP 2
     
     // Get the bot's response and image
-    //const [botMessage, imageURL] = await Promise.all([
+    const [botMessage] = await Promise.all([
       getBotResponse(userMessage),
       // UNCOMMENT IN STEP 3
       //getImageForBotResponse(userMessage),
