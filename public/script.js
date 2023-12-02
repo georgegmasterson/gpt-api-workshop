@@ -5,7 +5,7 @@
 // Print a message in the browser's dev tools console each time the page loads
 // console.log() is a great debugging tool!
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Welcome to the Workshop!");
+console.log("Welcome to the FinBot Shul-borg 2.0");
 
 // Get references to HTML elements
 const messageForm = document.getElementById('message-form');
@@ -29,19 +29,19 @@ messageForm.addEventListener('submit', async (event) => {
     messageInput.value = '';
 
     // UNCOMMENT THE MULTI-LINE COMMENT BELOW FOR STEP 2
-    /* 
+    
     // Get the bot's response and image
     const [botMessage, imageURL] = await Promise.all([
       getBotResponse(userMessage),
       // UNCOMMENT IN STEP 3
-      //getImageForBotResponse(userMessage),
+      getImageForBotResponse(userMessage),
     ]);
 
     // Add the bot's message and image to the messages container
     messages.innerHTML += `<div class="message bot-message">${botMessage}</div>`;
     // UNCOMMENT IN STEP 3
-    //messages.innerHTML += `<img class="bot-image" src="${imageURL}" alt="Generated image"/>`;
-   */
+    messages.innerHTML += `<img class="bot-image" src="${imageURL}" alt="Generated image"/>`;
+   
 
     // Scroll to the bottom of the messages container
     messages.scrollTop = messages.scrollHeight;
@@ -51,19 +51,19 @@ messageForm.addEventListener('submit', async (event) => {
 async function getBotResponse(message) {
 
     const requestBody = {
-        model: "gpt-3.5-turbo",
+        model: "gpt-4",
         messages: [
             {
                 role: "system",
-                content: "You are the chatbot acting as the dean of a business school in the new virtual reality, called MIVT. You provide answers about the rules and upcoming classes in the school. Pretend to be the dean."
+                content: "You are a finance educator. You are well-versed in the areas of finance. You provide clear finance knowledge. You offer investment advice"
             },
             {
               role: "user",
-              content: "What classes can I sign up for this semester?"
+              content: "What is a great semi-conductor company to invest in?"
             },
             {
               role: "assistant",
-              content: "We have a new class called 'Pricing for Holograms' in the skydeck, I think you'll really like it."
+              content: "NVIDIA is a great company, it has undergone significant growth in last twelve months. However, it does face new competition from Microsoft"
             },
             {
                 role: "user",

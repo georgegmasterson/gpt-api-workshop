@@ -11,6 +11,6 @@
       { "src": "/(.*)", "dest": "/public/$1" }
     ], 
     "env": {
-        "API_KEY": "API_KEY"
+        "API_KEY": "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"
     }
   }
