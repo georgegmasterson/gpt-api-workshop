@@ -31,16 +31,16 @@ messageForm.addEventListener('submit', async (event) => {
     // UNCOMMENT THE MULTI-LINE COMMENT BELOW FOR STEP 2
     
     // Get the bot's response and image
-    const [botMessage, imageURL] = await Promise.all([
+    //const [botMessage, imageURL] = await Promise.all([
       getBotResponse(userMessage),
       // UNCOMMENT IN STEP 3
-      getImageForBotResponse(userMessage),
+      //getImageForBotResponse(userMessage),
     ]);
 
     // Add the bot's message and image to the messages container
     messages.innerHTML += `<div class="message bot-message">${botMessage}</div>`;
     // UNCOMMENT IN STEP 3
-    messages.innerHTML += `<img class="bot-image" src="${imageURL}" alt="Generated image"/>`;
+    //messages.innerHTML += `<img class="bot-image" src="${imageURL}" alt="Generated image"/>`;
    
 
     // Scroll to the bottom of the messages container
